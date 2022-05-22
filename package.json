@@ -1,7 +1,7 @@
 {
-  "name": "sedona-20",
+  "name": "katrovsky-website",
   "private": true,
-  "description": "Личный проект «Седона» от HTML Academy",
+  "description": "Персональный сайт Катровского Романа",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "9.8.4",
