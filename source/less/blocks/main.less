@@ -1,12 +1,18 @@
 .main {
   margin: 0 auto;
+  font-family: "PTSans-Narrow", "Arial", sans-serif;
+  color: @basic-black;
 
   @media (max-width: @mobile-width) {
     width: 335px;
+    font-size: 18px;
+    line-height: 30px;
   }
 
   @media (min-width: (@mobile-width + 1px)) and (max-width: (@desktop-width - 1px)) {
     width: 482px;
+    font-size: 20px;
+    line-height: 34px;
   }
 
   @media (min-width: @desktop-width) {
@@ -14,8 +20,49 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    font-size: 20px;
+    line-height: 34px;
   }
 }
+
+.main-big-title {
+  font-family: "PlayfairDisplay-Black", "Arial", sans-serif;
+  color: @basic-black;
+
+  &--first {
+    margin-top: 0;
+  }
+
+  @media (max-width: @mobile-width) {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  @media (min-width: (@mobile-width + 1px)) and (max-width: (@desktop-width - 1px)) {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 48px;
+    line-height: 46px;
+  }
+}
+
+.main-middle-title {
+  font-family: "PTSans-Narrow", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @basic-gold;
+}
+
+// .main p {
+//   margin-top: 0;
+//   margin-bottom: 0;
+// }
 
 // outside
 
@@ -31,29 +78,5 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 80px;
-  }
-}
-
-.main-big-title {
-  font-family: "PlayfairDisplay-Black", "Arial", sans-serif;
-  color: @basic-black;
-
-  &--first {
-    margin-top: 0;
-  }
-
-  @media (max-width: @mobile-width) {
-    font-size: 48px;
-    line-height: 46px;
-  }
-
-  @media (min-width: (@mobile-width + 1px)) and (max-width: (@desktop-width - 1px)) {
-    font-size: 32px;
-    line-height: 42px;
-  }
-
-  @media (min-width: @desktop-width) {
-    font-size: 32px;
-    line-height: 42px;
   }
 }
