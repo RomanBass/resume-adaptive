@@ -57,16 +57,17 @@
   font-weight: 700;
   text-transform: uppercase;
   color: @basic-gold;
-}
 
-// .main p {
-//   margin-top: 0;
-//   margin-bottom: 0;
-// }
+  &--mfti {
+    @media (min-width: (@mobile-width + 1px)) and (max-width: (@desktop-width - 1px)) {
+      padding-right: 100px;
+    }
+  }
+}
 
 // outside
 
-.main {
+.page__main {
 
   @media (max-width: @mobile-width) {
     margin-top: 40px;
