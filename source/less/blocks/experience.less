@@ -1,14 +1,50 @@
 .experience {
-  background-color: aquamarine;
+
   @media (min-width: @desktop-width) {
     width: 350px;
   }
 }
 
-.skills-title {
+.experience-item:not(:last-of-type) {
+
+  @media (max-width: @mobile-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: (@mobile-width + 1px)) and (max-width: (@desktop-width - 1px)) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 60px;
+  }
+}
+
+.experience-title {
   @media (min-width: @desktop-width) {
     margin-top: 0;
   }
+}
+
+.experience-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-list--broadcasters-info {
+  font-weight: 800;
+}
+
+.experience-list--broadcasters-info span {
+  font-weight: 400;
+}
+
+.experience-list a {
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: @basic-green;
 }
 
 // outside
@@ -16,14 +52,14 @@
 .main__experience {
 
   @media (max-width: @mobile-width) {
-      margin-top: 80px;
-    }
+    margin-top: 80px;
+  }
 
-    @media (min-width: (@mobile-width + 1px)) and (max-width: (@desktop-width - 1px)) {
-      margin-top: 120px;
-    }
+  @media (min-width: (@mobile-width + 1px)) and (max-width: (@desktop-width - 1px)) {
+    margin-top: 120px;
+  }
 
-    @media (min-width: @desktop-width) {
-      margin-top: 0;
-    }
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }
