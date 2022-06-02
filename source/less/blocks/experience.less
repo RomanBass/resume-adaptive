@@ -45,6 +45,17 @@
   text-decoration: none;
   text-transform: uppercase;
   color: @basic-green;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    background-color: fade(@basic-green; 20%);
+    transition: all 0.4s ease;
+    outline: none;
+  }
 }
 
 // outside
