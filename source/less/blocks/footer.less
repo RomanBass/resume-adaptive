@@ -1,0 +1,67 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: @mobile-width) {
+    height: 400px;
+    background-image: linear-gradient(-5.3deg, fade(@basic-gold, 10%) 400px, fade(@basic-white, 10%) 0);
+  }
+
+  @media (min-width: (@mobile-width + 1px)) and (max-width: (@desktop-width - 1px)) {
+    height: 330px;
+    background-image: linear-gradient(-5.3deg, fade(@basic-gold, 10%) 330px, fade(@basic-white, 10%) 0);
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 430px;
+    background-image: linear-gradient(-5.3deg, fade(@basic-gold, 10%) 427px, fade(@basic-white, 10%) 0);
+  }
+}
+
+.footer-title {
+  font-family: "PlayfairDisplay-Black", "Arial", sans-serif;
+  letter-spacing: -1.14px;
+  text-align: center;
+
+  @media (max-width: @mobile-width) {
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  @media (min-width: (@mobile-width + 1px)) and (max-width: (@desktop-width - 1px)) {
+    margin-top: 75px;
+    margin-bottom: 0;
+    font-size: 56px;
+    line-height: 66px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 135px;
+    margin-bottom: 0;
+    font-size: 66px;
+    line-height: 82px;
+  }
+
+}
+
+.footer-contact {
+  margin: 0 auto;
+
+  @media (max-width: @mobile-width) {
+    width: 270px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: (@mobile-width + 1px)) and (max-width: (@desktop-width - 1px)) {
+    margin-bottom: 10px;
+    width: 310px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 20px;
+    width: 375px;
+  }
+}
