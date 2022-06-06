@@ -1,5 +1,3 @@
-//inside
-
 .intro {
   margin: 0 auto;
   padding: 0;
@@ -21,6 +19,15 @@
 }
 
 .intro-picture {
+  border-radius: 50%;
+  filter: grayscale(1);
+  transition: all 1s ease;
+
+  &:hover {
+    filter: grayscale(0);
+    transition: all 1s ease;
+  }
+
   @media (min-width: @desktop-width) {
     display: block;
     margin: 0 auto;
