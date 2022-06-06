@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-	<head>
-		<meta charset="utf-8">
-    <meta name="viewport" contant="width=device-width, initial-scale=1">
-		<title>Катровский Роман</title>
-		<link href="css/style.css" rel="stylesheet">
-	</head>
 
-	<body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Катровский Роман</title>
+  <link rel="preload" href="/fonts/PlayfairDisplay-Black.woff2" as="font">
+  <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
+  <link href="css/style.css" rel="stylesheet">
+</head>
 
-		<header class="header">
-      <div class="header__menu menu">
-        <a href="index.html" class="menu__main-link main-link">Работа</a>
-        <a href="education.html" class="menu__projects-link projects-link">Обучение</a>
-        <p class="menu__certificates-link certificates-link">Развлечение</p>
-			</div>
-      <div class="header__info info">
-        <div class="info__photo-wrapper photo-wrapper">
-          <img  class="photo-wrapper__photo photo" src="img/katrovsky.jpg" width="350" height="350" alt="Фото Катровский Роман">
-        </div>
-        <div class="info__text text">
-          <h3 class="text__profession profession">Музыка, литература.</h3>
-          <h1 class="text__name name">Катровский Роман</h1>
-        </div>
+<body class="page__body body">
+
+  <header class="body__header header">
+    <nav class="header__menu menu">
+      <ul class="menu__menu-list menu-list">
+        <li class="menu-list__menu-item menu-item menu-item--not-active">
+          <a href="index.html">Работа</a>
+        </li>
+        <li class="menu-list__menu-item menu-item menu-item--not-active">
+          <a href="education.html">Обучение</a>
+        </li>
+        <li class="menu-list__menu-item menu-item menu-item--active">
+          <a>Развлечение</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__intro intro">
+      <div class="intro-photo-wrapper">
+        <img class="intro-picture" src="img/katrovsky.jpg" alt="Фото Катровский Роман">
       </div>
-		</header>
+      <div class="intro-content">
+        <h3 class="intro-description"></h3>
+        <h1 class="intro-name">Катровский Роман</h1>
+        <a href="projects.html" class="intro-projects button"></a>
+      </div>
+    </div>
+  </header>
 
-		<main class="main">
-        <section class="main__facts facts">
-          <h2 class="facts__title title">Страница в разработке.</h2>
-        </section>
-		</main>
+  <main class="page__main main">
+    <div class="main__summary summary">
 
-    <footer class="footer">
-      <h4 class="footer__title title">До связи!</h4>
-      <img class="footer__image image" src="img/contact.jpg" width="520" height="120" alt="Картинка с е-мейлом">
-      <div class="footer__menu menu">
-        <a href="index.html" class="menu__main-link main-link">Работа</a>
-        <a href="education.html" class="menu__projects-link projects-link">Обучение</a>
-        <p class="menu__certificates-link certificates-link">Развлечение</p>
-			</div>
-    </footer>
+      <section>
+        <h2 class="main-big-title main-big-title--first main-big-title--wip personal-data-title">Страница в разработке</h2>
+      </section>
 
-		<script src="js/script.js"></script>
-	</body>
+    </div>
+
+  </main>
+
+  <footer class="body__footer footer">
+    <h4 class="footer-title">До связи!</h4>
+    <img class="footer-contact" src="img/contact-desktop.jpg" alt="Картинка с е-мейлом">
+    <nav class="footer__menu menu">
+      <ul class="menu__menu-list menu-list">
+        <li class="menu-list__menu-item menu-item menu-item--not-active">
+          <a href="index.html">Работа</a>
+        </li>
+        <li class="menu-list__menu-item menu-item menu-item--not-active">
+          <a href="education.html">Обучение</a>
+        </li>
+        <li class="menu-list__menu-item menu-item menu-item--active">
+          <a>Развлечение</a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
 </html>
