@@ -1,5 +1,8 @@
 .broadcaster:not(:first-of-type) .broadcaster-title:first-of-type {
-  margin-top: 60px;
+
+  @media (min-width: (@tablet-width)) and (max-width: (@desktop-width - 1px)) {
+    margin-top: 60px;
+  }
 
   @media (max-width: @mobile-width) {
     margin-top: 45px;
@@ -18,4 +21,14 @@
     padding-right: 10px;
   }
 
+}
+
+.broadcasters-list {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 150px;
+    grid-row-gap: 50px;
+    margin-top: 75px;
+  }
 }
