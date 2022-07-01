@@ -55,6 +55,13 @@
   }
 }
 
+.course a.course-icon:hover+a.course-project,
+.course a.course-icon:focus+a.course-project {
+  background-color: fade(@basic-green; 40%);
+  transition: all 0.4s ease;
+  outline: none;
+}
+
 .course-title {
 
   @media (max-width: @mobile-width) {
