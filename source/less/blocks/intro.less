@@ -19,18 +19,26 @@
 }
 
 .intro-picture {
+  border: solid;
+  border-color: red;
   border-radius: 50%;
-  filter: grayscale(1);
-  transition: all 1s ease;
 
-  &:hover {
-    filter: grayscale(0);
-    transition: all 1s ease;
+  @media (max-width: @mobile-width) {
+    width: 135px;
+    border-width: 13px;
+  }
+
+  @media (min-width: (@mobile-width + 1px)) and (max-width: (@desktop-width - 1px)) {
+    width: 170px;
+    border-width: 15px;
   }
 
   @media (min-width: @desktop-width) {
     display: block;
     margin: 0 auto;
+    width: 290px;
+    border-width: 30px;
+
   }
 }
 
