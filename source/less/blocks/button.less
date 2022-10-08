@@ -27,10 +27,47 @@
     padding-right: 15px;
   }
 
-  &:hover,
-  &:focus {
+    &:hover {
     background-color: fade(@basic-green; 70%);
     transition: all 0.4s ease;
-    outline: none;
+    cursor: pointer;
   }
+}
+
+.button--up {
+  position: fixed;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  opacity: 0;
+  transition: all 0.4s ease;
+
+   &:hover  {
+    background-color: transparent;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+
+  @media (max-width: @mobile-width) {
+    width: 75px;
+    height: 75px;
+    bottom: 70px;
+    right: calc(50% - 180px);
+  }
+
+  @media (min-width: (@mobile-width + 1px)) and (max-width: (@desktop-width - 1px)) {
+    width: 100px;
+    height: 100px;
+    bottom: 100px;
+    right: calc(50% - 365px);
+    }
+
+  @media (min-width: @desktop-width) {
+  width: 100px;
+  height: 100px;
+  bottom: 100px;
+  right: calc(50% - 690px);
+  }
+
+
 }
