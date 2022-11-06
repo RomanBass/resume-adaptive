@@ -6,6 +6,7 @@
 *.pdf
 *.psd
 *.webm
+*.mp4
 *.sublime*
 node_modules/
 npm-debug.*

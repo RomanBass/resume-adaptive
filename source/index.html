@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>На досуге с гитарой !</title>
+  <title>С гитарой</title>
+  <link rel="icon" href="img/guitar-ico.png">
   <link rel="preload" href="/fonts/PlayfairDisplay-Black.woff2" as="font">
   <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
   <link href="css/style.css" rel="stylesheet">
@@ -22,12 +23,11 @@
     </nav>
     <div class="header__intro intro">
       <div class="intro-photo-wrapper">
-        <img class="intro-picture-1" src="img/guitar.jpg" alt="Картинка гитары">
-        <img class="intro-picture-2" src="img/camera.jpg" alt="Картинка дорожного знака камеры">
+        <img class="intro-picture-1" src="img/monkey.webp" alt="Картинка гитары">
       </div>
       <div class="intro-content">
-        <h3 class="intro-description">Персональный сайт<br>Катровского Р.</h3>
-        <h2 class="intro-name">На досуге <br>с гитарой !</h2>
+        <h3 class="intro-description">Обезьяна с гитарой<br>опасней обезьяны с гранатой</h3>
+        <h2 class="intro-name">Без гитары<br>нет кумара.</h2>
         <h1 class="intro-name visually-hidden">Катровский Роман</h1>
         <button type="button" class="intro-hobby button">Контакты</button>
       </div>
@@ -36,9 +36,18 @@
 
   <main class="page__main main">
     <section class="main__records records">
-      <h2 class="records-title main-big-title">Домашние видео</h2>
+      <h2 class="records-title main-big-title">Внестудийные записи.</h2>
 
       <div class="records__records-list records-list">
+
+        <section class="records-list__composition composition">
+          <h3 class="composition-band main-middle-title">Europe</h3>
+          <p class="composition-title">The Final Countdown</p>
+          <video class="composition-video" controls preload="none" poster="records/europe.jpg">
+            <source src="records/The_Final_Countdown-2022-10-11.webm" type="video/webm">
+          </video>
+          <p class="composition-date">11 октября 2022</p>
+        </section>
 
         <section class="records-list__composition composition">
           <h3 class="composition-band main-middle-title">Scorpions</h3>
@@ -76,15 +85,6 @@
           <p class="composition-date">04 июля 2022</p>
         </section>
 
-        <section class="records-list__composition composition">
-          <h3 class="composition-band main-middle-title">Europe</h3>
-          <p class="composition-title">The Final Countdown</p>
-          <video class="composition-video" controls preload="none" poster="records/europe.jpg">
-            <source src="records/The_Final_Countdown_20220619.webm" type="video/webm">
-          </video>
-          <p class="composition-date">19 июня 2022</p>
-        </section>
-
       </div>
     </section>
   </main>
@@ -104,12 +104,17 @@
           <a href="https://vk.ru/id78931741" aria-label="в контакте" class="">
             <img src="img/vk.svg" width="50" height="50" alt="иконка в контакте">
           </a>
-        </li>
+        </li><!---
         <li class="social-item">
-          <a href="https://www.youtube.com/channel/UCSq7sH-ipBVB6P_keFVFg4g" aria-label="youtube" class="">
+          <a href="https://www.youtube.com/channel/UCSq7sH-ipBVB6P_keFVFg4g/playlists" aria-label="youtube" class="">
             <img src="img/youtube.svg" width="50" height="50" alt="иконка youtube">
           </a>
         </li>
+        <li class="social-item">
+          <a href="https://github.com/RomanBass" aria-label="github" class="">
+            <img src="img/github.svg" width="50" height="50" alt="иконка гитхаб">
+          </a>
+        </li> -->
       </ul>
     </div>
 
@@ -123,7 +128,7 @@
   </footer>
 
   <button type="button" class="button button--up">
-    <img src="img/arrow-up.svg" width="100" height="100">
+    <img src="img/rocket.png" width="100" height="100">
   </button>
 
   <script>
@@ -142,7 +147,7 @@
     ////////////// кнопка ВВЕРХ /////////////////////
 
     const UpButton = {
-      VISIBLE_SCROLL_HEIGHT: 600,
+      VISIBLE_SCROLL_HEIGHT: 100,
       VISIBLE_CURSOR: "pointer",
       VISIBLE_OPACITY: 1,
       HIDEN_CURSOR: "auto",

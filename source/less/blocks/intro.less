@@ -20,25 +20,21 @@
 
 .intro-picture-1 {
   border: solid;
-  border-color: red;
-  border-radius: 50%;
+  border-color: @basic-gold;
+  border-radius: 10%;
 
   @media (max-width: @mobile-width) {
-    width: 135px;
-    border-width: 13px;
+    width: 100%;
   }
 
   @media (min-width: (@mobile-width + 1px)) and (max-width: (@desktop-width - 1px)) {
-    width: 170px;
-    border-width: 15px;
+    width: 100%;
   }
 
   @media (min-width: @desktop-width) {
     display: block;
     margin: 0 auto;
-    width: 290px;
-    border-width: 30px;
-
+    width: 400px;
   }
 }
 
@@ -81,15 +77,13 @@
   @media (max-width: @mobile-width) {
     margin: 0 auto;
     padding-top: 45px;
-    width: 160px;
-    height: 160px;
+    width: 300px;
   }
 
   @media (min-width: (@mobile-width + 1px)) and (max-width: (@desktop-width - 1px)) {
     margin: 0 auto;
     padding-top: 55px;
-    width: 200px;
-    height: 200px;
+    width: 450px;
   }
 
   @media (min-width: @desktop-width) {
@@ -107,7 +101,6 @@
 
   @media (max-width: @mobile-width) {
     margin: 0 auto;
-    margin-top: 70px;
     padding-top: 30px;
     font-size: 14px;
     line-height: 20px;
@@ -117,7 +110,6 @@
 
   @media (min-width: (@mobile-width + 1px)) and (max-width: (@desktop-width - 1px)) {
     margin: 0 auto;
-    margin-top: 80px;
     padding-top: 40px;
     font-size: 18px;
     line-height: 24px;
@@ -190,11 +182,11 @@
 .header__intro {
 
   @media (max-width: @mobile-width) {
-    height: 630px;
+    height: 675px;
   }
 
   @media (min-width: (@mobile-width + 1px)) and (max-width: (@desktop-width - 1px)) {
-    height: 900px;
+    height: 1000px;
   }
 
   @media (min-width: @desktop-width) {
