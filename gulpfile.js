@@ -6,6 +6,7 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
+const del = require("del");
 const sync = require("browser-sync").create();
 
 // Styles
@@ -21,7 +22,7 @@ const styles = () => {
     .pipe(csso())
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -50,6 +51,45 @@ const watcher = () => {
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
+
+
+// Copy Files
+
+const copy = () => {
+  return gulp.src([
+      "source/fonts/**/*.{woff,woff2}",
+      "source/js/**",
+      "source/img/**",
+      "source/records/**",
+      "source/*.html"
+  ], {
+      base: "source"
+  })
+  .pipe(gulp.dest("build"));
+};
+
+exports.copy = copy;
+
+//Clear Folder
+
+const clean = () => {
+    return del("build");
+};
+
+exports.clean = clean;
+
+const build = gulp.series(
+  clean,
+  copy,
+  styles
+  // images,
+  // createWebp,
+  // sprite,
+  // htmlMinify
+);
+
+exports.build = build;
+
 exports.default = gulp.series(
-  styles, server, watcher
+  build, server, watcher
 );
