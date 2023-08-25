@@ -6,8 +6,8 @@
 *.pdf
 *.psd
 *.webm
-*.mp4
 *.sublime*
+build/
 node_modules/
 npm-debug.*
 source/css/*.css
