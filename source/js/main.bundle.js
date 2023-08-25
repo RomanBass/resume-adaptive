@@ -1,3 +1,8 @@
+/******/ (function() { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!***************************!*\
+  !*** ./source/js/main.js ***!
+  \***************************/
 ////////////// кнопка КОНТАКТЫ ///////////////////
 
 const contactsSection = document.querySelector('.footer');
@@ -56,3 +61,7 @@ upButton.addEventListener('mouseleave', () => {
   upButton.style.opacity = 1;
   }
 });
+
+/******/ })()
+;
+//# sourceMappingURL=main.bundle.js.map

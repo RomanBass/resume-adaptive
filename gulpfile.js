@@ -8,6 +8,9 @@ const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const del = require("del");
 const sync = require("browser-sync").create();
+const webpack = require("webpack");
+const webpachStream = require("webpack-stream");
+const webpackConfig = require("./webpack.config.js");
 
 // Styles
 
@@ -27,6 +30,18 @@ const styles = () => {
 }
 
 exports.styles = styles;
+
+// Scripts
+
+const scripts = () => {
+  return gulp.src("source/js/main.js")
+  .pipe(webpachStream(webpackConfig), webpack)
+  .pipe(gulp.dest("build/js"))
+  .pipe(gulp.dest("source/js"))
+
+}
+
+exports.scripts = scripts;
 
 // Server
 
@@ -51,14 +66,12 @@ const watcher = () => {
   gulp.watch("source/*.html").on("change", () => sync.reload());
 }
 
-
-
 // Copy Files
 
 const copy = () => {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
-      "source/js/**",
+      //"source/js/**",
       "source/img/**",
       "source/records/**",
       "source/*.html"
@@ -88,6 +101,7 @@ const build = gulp.series(
   clean,
   copy,
   styles,
+  scripts,
   cleanStylesMap
   // images,
   // createWebp,
