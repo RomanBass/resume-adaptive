@@ -78,10 +78,17 @@ const clean = () => {
 
 exports.clean = clean;
 
+const cleanStylesMap = () => {
+  return del("build/css/styles.min.css.map");
+};
+
+exports.cleanStylesMap = cleanStylesMap;
+
 const build = gulp.series(
   clean,
   copy,
-  styles
+  styles,
+  cleanStylesMap
   // images,
   // createWebp,
   // sprite,
