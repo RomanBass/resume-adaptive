@@ -1,10 +1,10 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./source/js/button-contacts.js":
-/*!**************************************!*\
-  !*** ./source/js/button-contacts.js ***!
-  \**************************************/
+/***/ "./source/js/modules/button-contacts.js":
+/*!**********************************************!*\
+  !*** ./source/js/modules/button-contacts.js ***!
+  \**********************************************/
 /***/ (function() {
 
 const contactsSection = document.querySelector('.footer');
@@ -19,10 +19,10 @@ contactsButton.addEventListener('click', scrollToContacts);
 
 /***/ }),
 
-/***/ "./source/js/button-up.js":
-/*!********************************!*\
-  !*** ./source/js/button-up.js ***!
-  \********************************/
+/***/ "./source/js/modules/button-up.js":
+/*!****************************************!*\
+  !*** ./source/js/modules/button-up.js ***!
+  \****************************************/
 /***/ (function() {
 
 ////////////// кнопка ВВЕРХ /////////////////////
@@ -148,13 +148,13 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 !function() {
 "use strict";
-/*!***************************!*\
-  !*** ./source/js/main.js ***!
-  \***************************/
+/*!***********************************!*\
+  !*** ./source/js/modules/main.js ***!
+  \***********************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _button_contacts_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./button-contacts.js */ "./source/js/button-contacts.js");
+/* harmony import */ var _button_contacts_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./button-contacts.js */ "./source/js/modules/button-contacts.js");
 /* harmony import */ var _button_contacts_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_button_contacts_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _button_up_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./button-up.js */ "./source/js/button-up.js");
+/* harmony import */ var _button_up_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./button-up.js */ "./source/js/modules/button-up.js");
 /* harmony import */ var _button_up_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_button_up_js__WEBPACK_IMPORTED_MODULE_1__);
 
 

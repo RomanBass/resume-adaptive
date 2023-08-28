@@ -34,11 +34,11 @@ exports.styles = styles;
 // Scripts
 
 const scripts = () => {
-  return gulp.src("source/js/main.js")
+  return gulp.src("source/js/modules/main.js")
   .pipe(webpackStream(webpackConfig), webpack)
   .pipe(gulp.dest("build/js"))
   .pipe(gulp.dest("source/js"))
-  //.pipe(sync.stream());
+  .pipe(sync.stream());
 }
 
 exports.scripts = scripts;
@@ -63,8 +63,8 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  gulp.watch("source/js/modules/*.js", gulp.series("scripts"));
   gulp.watch("source/*.html").on("change", () => sync.reload());
-  gulp.watch("source/js/*.js", gulp.series("scripts"));
 }
 
 // Copy Files
@@ -72,7 +72,6 @@ const watcher = () => {
 const copy = () => {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
-      //"source/js/**",
       "source/img/**",
       "source/records/**",
       "source/*.html"
