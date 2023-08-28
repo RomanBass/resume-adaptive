@@ -97,12 +97,19 @@ const cleanStylesMap = () => {
 
 exports.cleanStylesMap = cleanStylesMap;
 
+const cleanScriptsMap = () => {
+  return del("build/js/main.bundle.js.map");
+};
+
+exports.cleanScriptsMap = cleanScriptsMap;
+
 const build = gulp.series(
   clean,
   copy,
   styles,
   scripts,
-  cleanStylesMap
+  cleanStylesMap,
+  cleanScriptsMap
   // images,
   // createWebp,
   // sprite,
