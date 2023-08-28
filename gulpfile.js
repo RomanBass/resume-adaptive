@@ -9,7 +9,7 @@ const rename = require("gulp-rename");
 const del = require("del");
 const sync = require("browser-sync").create();
 const webpack = require("webpack");
-const webpachStream = require("webpack-stream");
+const webpackStream = require("webpack-stream");
 const webpackConfig = require("./webpack.config.js");
 
 // Styles
@@ -35,10 +35,10 @@ exports.styles = styles;
 
 const scripts = () => {
   return gulp.src("source/js/main.js")
-  .pipe(webpachStream(webpackConfig), webpack)
+  .pipe(webpackStream(webpackConfig), webpack)
   .pipe(gulp.dest("build/js"))
   .pipe(gulp.dest("source/js"))
-
+  //.pipe(sync.stream());
 }
 
 exports.scripts = scripts;
@@ -64,6 +64,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
   gulp.watch("source/*.html").on("change", () => sync.reload());
+  gulp.watch("source/js/*.js", gulp.series("scripts"));
 }
 
 // Copy Files
