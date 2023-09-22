@@ -59,12 +59,22 @@ const server = (done) => {
 
 exports.server = server;
 
+//HTML Minify
+
+const htmlMinify = () => {
+  return gulp.src("source/*.html")
+   // .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("build"))
+}
+
+exports.htmlMinify = htmlMinify;
+
 // Watcher
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
   gulp.watch("source/js/modules/*.js", gulp.series("scripts"));
-  gulp.watch("source/*.html").on("change", () => sync.reload());
+  gulp.watch("source/*.html").on("change", () => {htmlMinify(); sync.reload()});
 }
 
 // Copy Files
@@ -109,11 +119,11 @@ const build = gulp.series(
   styles,
   scripts,
   cleanStylesMap,
-  cleanScriptsMap
+  cleanScriptsMap,
   // images,
   // createWebp,
   // sprite,
-  // htmlMinify
+  htmlMinify
 );
 
 exports.build = build;
