@@ -51,6 +51,19 @@
           <a href="#" class="filter-option_filter-text filter-text">Классика</a>
         </li>
       </ul>
+
+      <div class="records__sorting sorting">
+        <label class="sorting-label" for="pet-select">Сортировка:</label>
+
+        <select class="sorting-select" name="compositions-list" id="pet-select">
+          <option class="sorting-option" value="composition">По названию композиции</option>
+          <option class="sorting-option sorting-option--active" value="author">По имени автора</option>
+          <option class="sorting-option" value="date-late">По дате записи от поздней к ранней</option>
+          <option class="sorting-option" value="date-early">По дате записи от ранней к поздней</option>
+          <option class="sorting-option" value="rating">По рейтингу</option>
+        </select>
+      </div>
+
       <!--<h3 class="main-info-top">...</h3> -->
       <div class="records__records-list records-list">
 
@@ -63,7 +76,7 @@
           <p class="composition-date visually-hidden">27 августа 2023</p>
         </section>
 
-          <section class="records-list__composition composition">
+        <section class="records-list__composition composition">
           <h3 class="composition-band main-middle-title">Joe Zawinul</h3>
           <p class="composition-title">Mercy Mercy Mercy</p>
           <video class="composition-video" controls preload="none" poster="img/compositions/joe-zawinul.webp">
