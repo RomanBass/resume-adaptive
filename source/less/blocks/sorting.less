@@ -1,5 +1,6 @@
 .sorting {
   display: flex;
+  flex-wrap: wrap;
   justify-content:center;
   font-weight: 800;
   // outline: 2px solid red;
@@ -7,8 +8,13 @@
 }
 
 .sorting-label {
+  font-family: "PTSans-Narrow-Bold";
   padding-right: 5px;
   font-size: 24px;
+  @media (max-width: @mobile-width) {
+    padding-bottom: 10px;
+    font-size: 24px;
+    }
 }
 
 .sorting-select {
