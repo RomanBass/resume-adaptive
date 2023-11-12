@@ -1,12 +1,12 @@
-.filter {
+.paging {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
   background-color: @light-gold;
   border-radius: 15px;
 
@@ -26,4 +26,27 @@
     border-radius: 10px;
   }
 
+}
+
+.paging__control--disabled {
+  background-color: @basic-gold;
+  cursor: default;
+
+  &:hover {
+    background-color: @basic-gold;
+    cursor: default;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.paging__info {
+  font-family: "PTSans-Narrow-Bold";
+  font-size: 34px;
+
+  @media (max-width: @mobile-width) {
+    font-size: 30px;
+  }
 }
