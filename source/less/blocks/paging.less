@@ -1,39 +1,44 @@
 .paging {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content:center;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 30px;
   padding-right: 30px;
-  background-color: @light-gold;
-  border-radius: 15px;
+  // background-color: @light-gold;
+  // border-radius: 15px;
 
   @media (min-width: (@mobile-width + 1px)) and (max-width: (@desktop-width - 1px)) {
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   @media (max-width: @mobile-width) {
-
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
   }
+}
 
+.paging__control:not(:last-child) {
+  margin-right: 20px;
+  @media (max-width: @mobile-width) {
+    margin-right: 15px;
+  }
 }
 
 .paging__control--disabled {
-  background-color: @basic-gold;
+  background-color: fade(@basic-green; 30%);
   cursor: default;
 
   &:hover {
-    background-color: @basic-gold;
+    background-color: fade(@basic-green; 30%);
     cursor: default;
   }
 
@@ -45,8 +50,10 @@
 .paging__info {
   font-family: "PTSans-Narrow-Bold";
   font-size: 34px;
+  margin-right: 20px;
 
   @media (max-width: @mobile-width) {
     font-size: 30px;
+    margin-right: 15px;
   }
 }
